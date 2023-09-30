@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | [Challenge Name Here]</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
+    <div class="bg-pattern" role="background pattern"></div>
+    <header>
+      <div class="container container-header">
+        <div class="title">
+          <h1>Social Media Dashboard</h1>
+          <p>Total Followers: 23,004</p>
+        </div>
+        <div class="ruler"></div>
+        <div class="toggle-switch">
+          <label class="switch-title" for="switch">Dark Mode</label>
+          <input type="checkbox" id="switch" />
+          <label class="switch-label" for="switch"></label>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section id="today-cards" class="container today-cards-section"></section>
+      <section id="overview-cards" class="container overview-cards-section">
+        <header>
+          <h2>Overview - Today</h2>
+        </header>
+        <div class="overview-cards-box"></div>
+      </section>
+    </main>
+
+    <!-- TODAY MEDIA CARDS -->
+    <template id="today-media-cards">
+      <div class="card-bg-pattern">
+        <div class="today-card">
+          <div class="card-title">
+            <img data-today-title-icon alt="" />
+            <p data-today-title></p>
+          </div>
+          <div class="card-body">
+            <h2 data-today-body-title></h2>
+            <p data-today-body-subtitle></p>
+          </div>
+          <div class="card-footer">
+            <img data-today-footer-icon alt="" />
+            <p data-today-footer-text></p>
+          </div>
+        </div>
+      </div>
+    </template>
+    <!-- OVERVIEW MEDIA CARDS -->
+    <template id="overview-media-cards">
+      <div class="overview-card">
+        <div class="overview-card-title">
+          <p data-overview-media-activity></p>
+          <img data-overview-media-icon alt="" />
+        </div>
+        <div class="overview-card-footer">
+          <p data-overview-followers></p>
+          <div class="indicator-box">
+            <img data-overview-indicator alt="" />
+            <span data-overview-percentage></span>
+          </div>
+        </div>
+      </div>
+    </template>
+    <script src="js/index.js"></script>
+  </body>
+</html>
